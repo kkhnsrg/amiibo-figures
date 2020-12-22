@@ -1,0 +1,704 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5BF59C1258DD85E00F2BEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF59C0258DD85E00F2BEEE /* AppDelegate.swift */; };
+		A5BF59CA258DD86500F2BEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5BF59C9258DD86500F2BEEE /* Assets.xcassets */; };
+		A5BF59CD258DD86500F2BEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5BF59CB258DD86500F2BEEE /* LaunchScreen.storyboard */; };
+		A5BF59E3258DD86500F2BEEE /* AmiiboMarioFiguresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF59E2258DD86500F2BEEE /* AmiiboMarioFiguresUITests.swift */; };
+		A5BF59F9258DD97000F2BEEE /* FiguresContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF59F8258DD97000F2BEEE /* FiguresContract.swift */; };
+		A5BF59FE258DD97E00F2BEEE /* DetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF59FD258DD97E00F2BEEE /* DetailsContract.swift */; };
+		A5BF5A03258DD99100F2BEEE /* FiguresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A02258DD99100F2BEEE /* FiguresViewController.swift */; };
+		A5BF5A08258DD99D00F2BEEE /* FiguresPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A07258DD99D00F2BEEE /* FiguresPresenter.swift */; };
+		A5BF5A0D258DD9AE00F2BEEE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A0C258DD9AE00F2BEEE /* DetailsViewController.swift */; };
+		A5BF5A12258DD9C000F2BEEE /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A11258DD9C000F2BEEE /* DetailsPresenter.swift */; };
+		A5BF5A18258DD9E700F2BEEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A17258DD9E700F2BEEE /* Coordinator.swift */; };
+		A5BF5A22258DDA9400F2BEEE /* FiguresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A21258DDA9400F2BEEE /* FiguresResponse.swift */; };
+		A5BF5A59258F36FF00F2BEEE /* FiguresCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A58258F36FF00F2BEEE /* FiguresCollectionViewCell.swift */; };
+		A5BF5A5E258F37BE00F2BEEE /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A5D258F37BE00F2BEEE /* UIImageViewExtensions.swift */; };
+		A5BF5A67258F6F5100F2BEEE /* FetchFiguresUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A66258F6F5100F2BEEE /* FetchFiguresUseCase.swift */; };
+		A5BF5A922590560600F2BEEE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A912590560600F2BEEE /* Router.swift */; };
+		A5BF5A972590591C00F2BEEE /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5A962590591C00F2BEEE /* ServiceLayer.swift */; };
+		A5BF5AAC25920F4700F2BEEE /* FiguresPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF5AAB25920F4700F2BEEE /* FiguresPresenterTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5BF59D4258DD86500F2BEEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5BF59B5258DD85E00F2BEEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5BF59BC258DD85E00F2BEEE;
+			remoteInfo = AmiiboMarioFigures;
+		};
+		A5BF59DF258DD86500F2BEEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5BF59B5258DD85E00F2BEEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5BF59BC258DD85E00F2BEEE;
+			remoteInfo = AmiiboMarioFigures;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5BF59BD258DD85E00F2BEEE /* AmiiboMarioFigures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmiiboMarioFigures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BF59C0258DD85E00F2BEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5BF59C9258DD86500F2BEEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5BF59CC258DD86500F2BEEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5BF59CE258DD86500F2BEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5BF59D3258DD86500F2BEEE /* AmiiboMarioFiguresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmiiboMarioFiguresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BF59D9258DD86500F2BEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5BF59DE258DD86500F2BEEE /* AmiiboMarioFiguresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmiiboMarioFiguresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BF59E2258DD86500F2BEEE /* AmiiboMarioFiguresUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboMarioFiguresUITests.swift; sourceTree = "<group>"; };
+		A5BF59E4258DD86500F2BEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5BF59F8258DD97000F2BEEE /* FiguresContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresContract.swift; sourceTree = "<group>"; };
+		A5BF59FD258DD97E00F2BEEE /* DetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContract.swift; sourceTree = "<group>"; };
+		A5BF5A02258DD99100F2BEEE /* FiguresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresViewController.swift; sourceTree = "<group>"; };
+		A5BF5A07258DD99D00F2BEEE /* FiguresPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresPresenter.swift; sourceTree = "<group>"; };
+		A5BF5A0C258DD9AE00F2BEEE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A5BF5A11258DD9C000F2BEEE /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		A5BF5A17258DD9E700F2BEEE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A5BF5A21258DDA9400F2BEEE /* FiguresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresResponse.swift; sourceTree = "<group>"; };
+		A5BF5A58258F36FF00F2BEEE /* FiguresCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresCollectionViewCell.swift; sourceTree = "<group>"; };
+		A5BF5A5D258F37BE00F2BEEE /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		A5BF5A66258F6F5100F2BEEE /* FetchFiguresUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFiguresUseCase.swift; sourceTree = "<group>"; };
+		A5BF5A912590560600F2BEEE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A5BF5A962590591C00F2BEEE /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		A5BF5AAB25920F4700F2BEEE /* FiguresPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresPresenterTest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5BF59BA258DD85E00F2BEEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5BF59D0258DD86500F2BEEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5BF59DB258DD86500F2BEEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5BF59B4258DD85E00F2BEEE = {
+			isa = PBXGroup;
+			children = (
+				A5BF59BF258DD85E00F2BEEE /* AmiiboMarioFigures */,
+				A5BF59D6258DD86500F2BEEE /* AmiiboMarioFiguresTests */,
+				A5BF59E1258DD86500F2BEEE /* AmiiboMarioFiguresUITests */,
+				A5BF59BE258DD85E00F2BEEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5BF59BE258DD85E00F2BEEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF59BD258DD85E00F2BEEE /* AmiiboMarioFigures.app */,
+				A5BF59D3258DD86500F2BEEE /* AmiiboMarioFiguresTests.xctest */,
+				A5BF59DE258DD86500F2BEEE /* AmiiboMarioFiguresUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5BF59BF258DD85E00F2BEEE /* AmiiboMarioFigures */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF5A1F258DDA7A00F2BEEE /* Domain */,
+				A5BF5A16258DD9C600F2BEEE /* Navigation */,
+				A5BF59F5258DD8E900F2BEEE /* Utility */,
+				A5BF59F4258DD8CA00F2BEEE /* Network */,
+				A5BF59F3258DD8AB00F2BEEE /* UI */,
+				A5BF59C0258DD85E00F2BEEE /* AppDelegate.swift */,
+				A5BF59C9258DD86500F2BEEE /* Assets.xcassets */,
+				A5BF59CB258DD86500F2BEEE /* LaunchScreen.storyboard */,
+				A5BF59CE258DD86500F2BEEE /* Info.plist */,
+			);
+			path = AmiiboMarioFigures;
+			sourceTree = "<group>";
+		};
+		A5BF59D6258DD86500F2BEEE /* AmiiboMarioFiguresTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF5AAB25920F4700F2BEEE /* FiguresPresenterTest.swift */,
+				A5BF59D9258DD86500F2BEEE /* Info.plist */,
+			);
+			path = AmiiboMarioFiguresTests;
+			sourceTree = "<group>";
+		};
+		A5BF59E1258DD86500F2BEEE /* AmiiboMarioFiguresUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF59E2258DD86500F2BEEE /* AmiiboMarioFiguresUITests.swift */,
+				A5BF59E4258DD86500F2BEEE /* Info.plist */,
+			);
+			path = AmiiboMarioFiguresUITests;
+			sourceTree = "<group>";
+		};
+		A5BF59F3258DD8AB00F2BEEE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF59F6258DD8F400F2BEEE /* Figures */,
+				A5BF59F7258DD94C00F2BEEE /* Details */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A5BF59F4258DD8CA00F2BEEE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF5A912590560600F2BEEE /* Router.swift */,
+				A5BF5A962590591C00F2BEEE /* ServiceLayer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A5BF59F5258DD8E900F2BEEE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF5A5D258F37BE00F2BEEE /* UIImageViewExtensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		A5BF59F6258DD8F400F2BEEE /* Figures */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF59F8258DD97000F2BEEE /* FiguresContract.swift */,
+				A5BF5A02258DD99100F2BEEE /* FiguresViewController.swift */,
+				A5BF5A07258DD99D00F2BEEE /* FiguresPresenter.swift */,
+				A5BF5A58258F36FF00F2BEEE /* FiguresCollectionViewCell.swift */,
+			);
+			path = Figures;
+			sourceTree = "<group>";
+		};
+		A5BF59F7258DD94C00F2BEEE /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF59FD258DD97E00F2BEEE /* DetailsContract.swift */,
+				A5BF5A0C258DD9AE00F2BEEE /* DetailsViewController.swift */,
+				A5BF5A11258DD9C000F2BEEE /* DetailsPresenter.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		A5BF5A16258DD9C600F2BEEE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF5A17258DD9E700F2BEEE /* Coordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A5BF5A1F258DDA7A00F2BEEE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF5A65258F6DBD00F2BEEE /* UseCases */,
+				A5BF5A20258DDA8400F2BEEE /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A5BF5A20258DDA8400F2BEEE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF5A21258DDA9400F2BEEE /* FiguresResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A5BF5A65258F6DBD00F2BEEE /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A5BF5A66258F6F5100F2BEEE /* FetchFiguresUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5BF59BC258DD85E00F2BEEE /* AmiiboMarioFigures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5BF59E7258DD86500F2BEEE /* Build configuration list for PBXNativeTarget "AmiiboMarioFigures" */;
+			buildPhases = (
+				A5BF59B9258DD85E00F2BEEE /* Sources */,
+				A5BF59BA258DD85E00F2BEEE /* Frameworks */,
+				A5BF59BB258DD85E00F2BEEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AmiiboMarioFigures;
+			productName = AmiiboMarioFigures;
+			productReference = A5BF59BD258DD85E00F2BEEE /* AmiiboMarioFigures.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5BF59D2258DD86500F2BEEE /* AmiiboMarioFiguresTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5BF59EA258DD86500F2BEEE /* Build configuration list for PBXNativeTarget "AmiiboMarioFiguresTests" */;
+			buildPhases = (
+				A5BF59CF258DD86500F2BEEE /* Sources */,
+				A5BF59D0258DD86500F2BEEE /* Frameworks */,
+				A5BF59D1258DD86500F2BEEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5BF59D5258DD86500F2BEEE /* PBXTargetDependency */,
+			);
+			name = AmiiboMarioFiguresTests;
+			productName = AmiiboMarioFiguresTests;
+			productReference = A5BF59D3258DD86500F2BEEE /* AmiiboMarioFiguresTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5BF59DD258DD86500F2BEEE /* AmiiboMarioFiguresUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5BF59ED258DD86500F2BEEE /* Build configuration list for PBXNativeTarget "AmiiboMarioFiguresUITests" */;
+			buildPhases = (
+				A5BF59DA258DD86500F2BEEE /* Sources */,
+				A5BF59DB258DD86500F2BEEE /* Frameworks */,
+				A5BF59DC258DD86500F2BEEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5BF59E0258DD86500F2BEEE /* PBXTargetDependency */,
+			);
+			name = AmiiboMarioFiguresUITests;
+			productName = AmiiboMarioFiguresUITests;
+			productReference = A5BF59DE258DD86500F2BEEE /* AmiiboMarioFiguresUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5BF59B5258DD85E00F2BEEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					A5BF59BC258DD85E00F2BEEE = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					A5BF59D2258DD86500F2BEEE = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = A5BF59BC258DD85E00F2BEEE;
+					};
+					A5BF59DD258DD86500F2BEEE = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = A5BF59BC258DD85E00F2BEEE;
+					};
+				};
+			};
+			buildConfigurationList = A5BF59B8258DD85E00F2BEEE /* Build configuration list for PBXProject "AmiiboMarioFigures" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5BF59B4258DD85E00F2BEEE;
+			productRefGroup = A5BF59BE258DD85E00F2BEEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5BF59BC258DD85E00F2BEEE /* AmiiboMarioFigures */,
+				A5BF59D2258DD86500F2BEEE /* AmiiboMarioFiguresTests */,
+				A5BF59DD258DD86500F2BEEE /* AmiiboMarioFiguresUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5BF59BB258DD85E00F2BEEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5BF59CD258DD86500F2BEEE /* LaunchScreen.storyboard in Resources */,
+				A5BF59CA258DD86500F2BEEE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5BF59D1258DD86500F2BEEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5BF59DC258DD86500F2BEEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5BF59B9258DD85E00F2BEEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5BF59FE258DD97E00F2BEEE /* DetailsContract.swift in Sources */,
+				A5BF5A18258DD9E700F2BEEE /* Coordinator.swift in Sources */,
+				A5BF5A03258DD99100F2BEEE /* FiguresViewController.swift in Sources */,
+				A5BF5A0D258DD9AE00F2BEEE /* DetailsViewController.swift in Sources */,
+				A5BF5A22258DDA9400F2BEEE /* FiguresResponse.swift in Sources */,
+				A5BF5A59258F36FF00F2BEEE /* FiguresCollectionViewCell.swift in Sources */,
+				A5BF5A08258DD99D00F2BEEE /* FiguresPresenter.swift in Sources */,
+				A5BF5A67258F6F5100F2BEEE /* FetchFiguresUseCase.swift in Sources */,
+				A5BF59C1258DD85E00F2BEEE /* AppDelegate.swift in Sources */,
+				A5BF5A922590560600F2BEEE /* Router.swift in Sources */,
+				A5BF5A972590591C00F2BEEE /* ServiceLayer.swift in Sources */,
+				A5BF59F9258DD97000F2BEEE /* FiguresContract.swift in Sources */,
+				A5BF5A5E258F37BE00F2BEEE /* UIImageViewExtensions.swift in Sources */,
+				A5BF5A12258DD9C000F2BEEE /* DetailsPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5BF59CF258DD86500F2BEEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5BF5AAC25920F4700F2BEEE /* FiguresPresenterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5BF59DA258DD86500F2BEEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5BF59E3258DD86500F2BEEE /* AmiiboMarioFiguresUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5BF59D5258DD86500F2BEEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5BF59BC258DD85E00F2BEEE /* AmiiboMarioFigures */;
+			targetProxy = A5BF59D4258DD86500F2BEEE /* PBXContainerItemProxy */;
+		};
+		A5BF59E0258DD86500F2BEEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5BF59BC258DD85E00F2BEEE /* AmiiboMarioFigures */;
+			targetProxy = A5BF59DF258DD86500F2BEEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5BF59CB258DD86500F2BEEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5BF59CC258DD86500F2BEEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5BF59E5258DD86500F2BEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_FLATTEN_NIBS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A5BF59E6258DD86500F2BEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_FLATTEN_NIBS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5BF59E8258DD86500F2BEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7NH277645;
+				INFOPLIST_FILE = AmiiboMarioFigures/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = srgk.AmiiboMarioFigures;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A5BF59E9258DD86500F2BEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7NH277645;
+				INFOPLIST_FILE = AmiiboMarioFigures/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = srgk.AmiiboMarioFigures;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A5BF59EB258DD86500F2BEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7NH277645;
+				INFOPLIST_FILE = AmiiboMarioFiguresTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = srgk.AmiiboMarioFiguresTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmiiboMarioFigures.app/AmiiboMarioFigures";
+			};
+			name = Debug;
+		};
+		A5BF59EC258DD86500F2BEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7NH277645;
+				INFOPLIST_FILE = AmiiboMarioFiguresTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = srgk.AmiiboMarioFiguresTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmiiboMarioFigures.app/AmiiboMarioFigures";
+			};
+			name = Release;
+		};
+		A5BF59EE258DD86500F2BEEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7NH277645;
+				INFOPLIST_FILE = AmiiboMarioFiguresUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = srgk.AmiiboMarioFiguresUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AmiiboMarioFigures;
+			};
+			name = Debug;
+		};
+		A5BF59EF258DD86500F2BEEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7NH277645;
+				INFOPLIST_FILE = AmiiboMarioFiguresUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = srgk.AmiiboMarioFiguresUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AmiiboMarioFigures;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5BF59B8258DD85E00F2BEEE /* Build configuration list for PBXProject "AmiiboMarioFigures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5BF59E5258DD86500F2BEEE /* Debug */,
+				A5BF59E6258DD86500F2BEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5BF59E7258DD86500F2BEEE /* Build configuration list for PBXNativeTarget "AmiiboMarioFigures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5BF59E8258DD86500F2BEEE /* Debug */,
+				A5BF59E9258DD86500F2BEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5BF59EA258DD86500F2BEEE /* Build configuration list for PBXNativeTarget "AmiiboMarioFiguresTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5BF59EB258DD86500F2BEEE /* Debug */,
+				A5BF59EC258DD86500F2BEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5BF59ED258DD86500F2BEEE /* Build configuration list for PBXNativeTarget "AmiiboMarioFiguresUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5BF59EE258DD86500F2BEEE /* Debug */,
+				A5BF59EF258DD86500F2BEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5BF59B5258DD85E00F2BEEE /* Project object */;
+}
