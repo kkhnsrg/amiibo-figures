@@ -27,7 +27,7 @@ class FiguresPresenter: FiguresViewPresenter {
             if(success) {
                 self.view.showFiguresData(figures: data)
             } else {
-                self.view.showMessage(message: "Error")
+                self.view.showMessage(message: "Data request error.")
             }
         }
     }

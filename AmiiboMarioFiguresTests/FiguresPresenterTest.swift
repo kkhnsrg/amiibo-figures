@@ -20,6 +20,7 @@ class TestConstants {
 class FiguresViewMock: FiguresView {
     
     var didCallShowData = false
+    var didCallShowMessage = false
 
     func showFiguresData(figures: [Figure]) {
         // Given
@@ -33,9 +34,12 @@ class FiguresViewMock: FiguresView {
         didCallShowData = true
     }
     
+    func showMessage(message: String) {
+        didCallShowMessage = true
+    }
+    
     func configure(presenter: FiguresViewPresenter) { }
     
-    func showMessage(message: String) { }
 }
 
 class NavigationControllerMock: UINavigationController { }
@@ -51,15 +55,7 @@ class CoordinatorMock: AppCoordinator {
         let expectedFigure = TestConstants.figure
 
         // Verify
-        XCTAssert(actualFigure.amiiboSeries == expectedFigure.amiiboSeries)
-        XCTAssert(actualFigure.character == expectedFigure.character)
-        XCTAssert(actualFigure.gameSeries == expectedFigure.gameSeries)
-        XCTAssert(actualFigure.imageUrl == expectedFigure.imageUrl)
-        XCTAssert(actualFigure.name == expectedFigure.name)
-        XCTAssert(actualFigure.release.au == expectedFigure.release.au)
-        XCTAssert(actualFigure.release.na == expectedFigure.release.na)
-        XCTAssert(actualFigure.release.eu == expectedFigure.release.eu)
-        XCTAssert(actualFigure.release.jp == expectedFigure.release.jp)
+        XCTAssertEqual(actualFigure, expectedFigure)
 
         didCallNavigateToDetails = true
     }
@@ -78,11 +74,11 @@ class ServiceMock : ServiceLayer {
         let actualParameters = router.parameters
 
         // Verify
-        XCTAssert(actualMethod == Router.getFigures.method)
-        XCTAssert(actualScheme == Router.getFigures.scheme)
-        XCTAssert(actualHost == Router.getFigures.host)
-        XCTAssert(actualPath == Router.getFigures.path)
-        XCTAssert(actualParameters == Router.getFigures.parameters)
+        XCTAssertEqual(actualMethod, Router.getFigures.method)
+        XCTAssertEqual(actualScheme, Router.getFigures.scheme)
+        XCTAssertEqual(actualHost, Router.getFigures.host)
+        XCTAssertEqual(actualPath, Router.getFigures.path)
+        XCTAssertEqual(actualParameters, Router.getFigures.parameters)
 
         completion(.success(TestConstants.response as! T))
         
@@ -117,8 +113,9 @@ class FiguresPresenterTest: XCTestCase {
         presenter?.getFiguresData()
         
         // Verify
-        XCTAssert(service?.didCallRequest == true, "request() should have been called")
-        XCTAssert(view?.didCallShowData == true, "showFiguresData() should have been called")
+        XCTAssertEqual(service?.didCallRequest, true, "request() should have been called")
+        XCTAssertEqual(view?.didCallShowData, true, "showFiguresData() should have been called")
+        XCTAssertNotEqual(view?.didCallShowMessage, true, "didCallShowMessage() shouldn't have been called")
     }
     
     func testNavigateToDetails() throws {
@@ -130,7 +127,7 @@ class FiguresPresenterTest: XCTestCase {
         presenter?.navigateToDetails(figure: figure)
         
         // Verify
-        XCTAssert(coordinator?.didCallNavigateToDetails == true, "navigateToDetails() should have been called")
+        XCTAssertEqual(coordinator?.didCallNavigateToDetails, true, "showFiguresData() should have been called")
     }
     
 }

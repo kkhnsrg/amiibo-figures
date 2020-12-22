@@ -17,7 +17,7 @@ class FiguresViewController: UIViewController {
     //MARK: - Views init
     private let figuresCollection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-
+        
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
         layout.scrollDirection = .vertical
@@ -26,7 +26,7 @@ class FiguresViewController: UIViewController {
         
         collectionView.register(FiguresCollectionViewCell.self, forCellWithReuseIdentifier: FiguresCollectionViewCell.reuseIdentifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         collectionView.backgroundColor = .none
         
         collectionView.showsHorizontalScrollIndicator = false
@@ -34,12 +34,21 @@ class FiguresViewController: UIViewController {
         
         return collectionView
     }()
+    private let messageAlert: UIAlertController = {
+        let alert = UIAlertController(
+            title: "Warning!",
+            message: "",
+            preferredStyle: .alert
+        )
+        return alert
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         addSubviews()
         arrangeSubviews()
+        setupActions()
         
         presenter.getFiguresData()
     }
@@ -61,14 +70,20 @@ private extension FiguresViewController {
     
     func arrangeSubviews() {
         let safeArea = view.safeAreaLayoutGuide
-
+        
         NSLayoutConstraint.activate([
             figuresCollection.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10),
             figuresCollection.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10),
             figuresCollection.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 10),
             figuresCollection.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -10),
         ])
-        
+    }
+    
+    func setupActions() {
+        let alertAction = UIAlertAction(title: "Retry", style: .default) { action in
+            self.presenter.getFiguresData()
+        }
+        messageAlert.addAction(alertAction)
     }
 }
 
@@ -80,13 +95,12 @@ extension FiguresViewController: FiguresView {
     
     func showFiguresData(figures: [Figure]) {
         figuresArray = figures
-        print("show figures", figuresArray)
-
         figuresCollection.reloadData()
     }
     
     func showMessage(message: String) {
-        print(message)
+        messageAlert.message = message
+        self.present(messageAlert, animated: true, completion: nil)
     }
 }
 
@@ -94,16 +108,16 @@ extension FiguresViewController: UICollectionViewDelegateFlowLayout, UICollectio
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         figuresArray.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FiguresCollectionViewCell.reuseIdentifier, for: indexPath) as? FiguresCollectionViewCell else {
             return FiguresCollectionViewCell()
         }
-
+        
         cell.configure(with: figuresArray[indexPath.row])
         cell.styleCell()
-
+        
         return cell
     }
     
@@ -124,8 +138,7 @@ extension FiguresViewController: UICollectionViewDelegateFlowLayout, UICollectio
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) {
             cell.backgroundView?.backgroundColor = .gray
-
         }
     }
-
+    
 }

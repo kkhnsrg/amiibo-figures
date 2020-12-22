@@ -13,7 +13,7 @@ struct FiguresResponse: Codable {
 }
 
 //MARK: - Figure response struct
-struct Figure: Codable, Equatable {
+struct Figure: Codable, Hashable {
     
     let amiiboSeries: String
     let character: String
@@ -48,7 +48,7 @@ struct Figure: Codable, Equatable {
     }
 }
 
-struct ReleaseDates: Codable {
+struct ReleaseDates: Codable, Hashable {
     let au: String
     let eu, jp: String?
     let na: String
